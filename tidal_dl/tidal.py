@@ -187,7 +187,7 @@ class TidalAPI(object):
 
         # if auth is successful:
         self.key.userId = result['user']['userId']
-        self.key.countryCode = result['user']['countryCode']
+        self.key.countryCode = 'GB'
         self.key.accessToken = result['access_token']
         self.key.refreshToken = result['refresh_token']
         self.key.expiresIn = result['expires_in']
@@ -218,7 +218,7 @@ class TidalAPI(object):
 
         # if auth is successful:
         self.key.userId = result['user']['userId']
-        self.key.countryCode = result['user']['countryCode']
+        self.key.countryCode = 'GB'
         self.key.accessToken = result['access_token']
         self.key.expiresIn = result['expires_in']
         return None, True
@@ -234,7 +234,7 @@ class TidalAPI(object):
                 return "User mismatch! Please use your own accesstoken.", False
 
         self.key.userId = result['userId']
-        self.key.countryCode = result['countryCode']
+        self.key.countryCode = 'GB'
         self.key.accessToken = accessToken
         return None, True
 
